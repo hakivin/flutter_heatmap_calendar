@@ -62,7 +62,7 @@ class HeatMapCalendar extends StatefulWidget {
 }
 
 class HeatMapCalendarState extends State<HeatMapCalendar> {
-  double currentOpacity = 0.3;
+  double currentOpacity = 1;
   bool displayDates = false;
 
   /// Toggles the labels in all [HeatMapDay]s
