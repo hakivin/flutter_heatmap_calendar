@@ -49,14 +49,14 @@ class HeatMapDay extends StatelessWidget {
       width: size,
       color: getColorFromThreshold(),
       margin: EdgeInsets.all(2.0),
-      child: AnimatedOpacity(
-        opacity: opacity,
-        duration: animationDuration,
-        child: Text(
-          currentDay.toString(),
-          style: TextStyle(fontWeight: fontWeight, color: textColor),
-        ),
-      ),
+      // child: AnimatedOpacity(
+      //   opacity: opacity,
+      //   duration: animationDuration,
+      //   child: Text(
+      //     currentDay.toString(),
+      //     style: TextStyle(fontWeight: fontWeight, color: textColor),
+      //   ),
+      // ),
     );
   }
 }

@@ -62,16 +62,16 @@ class HeatMapCalendar extends StatefulWidget {
 }
 
 class HeatMapCalendarState extends State<HeatMapCalendar> {
-  double currentOpacity = 0;
+  double currentOpacity = 1;
   bool displayDates = false;
 
   /// Toggles the labels in all [HeatMapDay]s
-  void onDoubleTap() {
-    setState(() {
-      displayDates = !displayDates;
-      currentOpacity = displayDates ? widget.textOpacity : 0;
-    });
-  }
+  // void onDoubleTap() {
+  //   setState(() {
+  //     displayDates = !displayDates;
+  //     currentOpacity = displayDates ? widget.textOpacity : 0;
+  //   });
+  // }
 
   /// Calculates the right amount of columns to create based on [maxWidth]
   ///
@@ -89,7 +89,7 @@ class HeatMapCalendarState extends State<HeatMapCalendar> {
     return LayoutBuilder(
       builder: (context, constraints) {
         return InkWell(
-          onDoubleTap: onDoubleTap,
+          // onDoubleTap: onDoubleTap,
           child: Container(
             height: (widget.squareSize + HeatMapCalendar.EDGE_SIZE) *
                 (HeatMapCalendar.ROW_COUNT + 1),
