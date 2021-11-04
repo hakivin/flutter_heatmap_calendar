@@ -69,6 +69,11 @@ class WeekColumns extends StatelessWidget {
         ));
       } else {
         DateTime currentDate = dateList.first;
+        if (currentDate.hour == 23) {
+          currentDate = TimeUtils.from(
+              currentDate.year, currentDate.month, currentDate.day + 1);
+        }
+        
         dateList.removeAt(0);
 
         final int? value = (input[currentDate] == null) ? 0 : input[currentDate];
